@@ -58,6 +58,11 @@ if (isset($_POST['selesai'])) {
     $tgl_bayar=date('Y-m-d');
     //
     $query=mysqli_query($koneksi,"update pembayaran set no_kwitansi='$no_kwitansi' ,status='1', `id_petugas` = '$id_petugas' ,tgl_bayar='$tgl_bayar' where status='0'");
+    ?>
+        <script>
+            window.location.href = '?page=pembayaran/index';
+        </script>
+        <?php
 }
 ?>
 
