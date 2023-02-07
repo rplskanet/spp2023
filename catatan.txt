@@ -1,0 +1,7 @@
+catatan github
+git init                 
+git add .
+git commit -m "tiga"
+git remote add origin https://gitlab.com/yannaelshofa/ukkspp.git
+ git push -u origin main  
+ 
