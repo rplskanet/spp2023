@@ -14,4 +14,5 @@ git remote add origin https://gitlab.com/yannaelshofa/ukkspp.git
   git pull origin main   // singkron 
 >>>>>>> 64d97da4e783ea5084cdb7f46bca51a4cd5a4927
 //Merapikan nominal 
-menambah fungsi di koneksi
+-menambah fungsi di koneksi
+-kondisi hapus

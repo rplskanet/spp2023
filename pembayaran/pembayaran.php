@@ -39,6 +39,9 @@ $cek=mysqli_query($koneksi,"select * from pembayaran where nis='$nis' and id_bay
 if(mysqli_num_rows($cek)>0){
     echo "Pembayaran sudah dibayarkan";
 }
+elseif($nis==""){
+    echo "Nis Masih Kosong";
+}
 else{
   
     $query=mysqli_query($koneksi,"insert into pembayaran(nis,id_bayar,id_petugas) values('$nis','$id_bayar','$id_petugas')");
@@ -68,14 +71,15 @@ if (isset($_POST['selesai'])) {
             </tr>
             <?php
     $i=1;
-    $query=mysqli_query($koneksi,"SELECT pembayaran.id,bayar.nama_bayar,bayar.nominal from pembayaran,bayar WHERE bayar.id_bayar=pembayaran.id_bayar AND pembayaran.status='0' AND pembayaran.nis='$nis'");
+    $query=mysqli_query($koneksi,"SELECT pembayaran.nis,pembayaran.id,bayar.nama_bayar,bayar.nominal from pembayaran,bayar WHERE bayar.id_bayar=pembayaran.id_bayar AND pembayaran.status='0' AND pembayaran.nis='$nis'");
     while($data=mysqli_fetch_array($query)){
     ?>
             <tr>
                 <td><?= $i++ ?></td>
                 <td><?= $data['nama_bayar']?></td>
                 <td align="right"><?= formatUang($data['nominal'])?></td$data['nominal']>
-                <td><a href="?page=pembayaran/hapus&id=<?= $data['id']   ?>" class="btn btn-danger">Hapus</a></td>
+                <td><a href="?page=pembayaran/hapus&id=<?= $data['id'] ?>&nis=<?= $data['nis'] ?>"
+                        class="btn btn-danger">Hapus</a></td>
             </tr>
             <?php
     $total=$total + $data['nominal'];
