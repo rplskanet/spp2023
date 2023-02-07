@@ -6,6 +6,7 @@ git remote add origin https://gitlab.com/yannaelshofa/ukkspp.git
  git push -u origin main  
  Tambahan
  ok
+ tambahan 2
 <<<<<<< HEAD
   // hore
 =======
