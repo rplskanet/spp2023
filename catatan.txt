@@ -6,4 +6,5 @@ git remote add origin https://gitlab.com/yannaelshofa/ukkspp.git
  git push -u origin main  
  Tambahan
  ok
- 
+ git branch -m master main // pindah master ke main
+  git pull origin main   // singkron 
