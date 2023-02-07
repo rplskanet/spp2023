@@ -17,6 +17,7 @@ if($_SESSION['status']!="sukses"){
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="shortcut icon" href="logo.png">
     <title>Aplikasi SPP</title>
 
     <!-- Custom fonts for this template-->
