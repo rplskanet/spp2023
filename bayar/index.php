@@ -20,9 +20,10 @@ include "koneksi.php";
                             <th>Nama Bayar</th>
                             <th>Nominal</th>
                             <th>Aksi</th>
-                    </thead>                 
+                    </thead>                
                     <tbody>
                         <?php
+                        
                         $query=mysqli_query($koneksi,"select * from bayar");
                         while($data=mysqli_fetch_array($query)){
                             ?>
