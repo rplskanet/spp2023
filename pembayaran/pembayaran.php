@@ -14,6 +14,7 @@ echo "Nama : ".$data['nama']."<br>";
 echo "Kelas : ".$data['kelasok']."<br>";
 ?>
         <form action="" method="post">
+          
             Pembayaran :
             <select class="form-control" name="id_bayar" id="">
                 <?php
@@ -27,7 +28,7 @@ echo "Kelas : ".$data['kelasok']."<br>";
             </select>
             <br>
             <button class="btn btn-primary" name="simpan">Simpan</button>
-            <button class="btn btn-warning" name="selesai">Selesai</button>
+           
         </form>
 
         <?php
@@ -63,8 +64,8 @@ if (isset($_POST['selesai'])) {
             window.location.href = '?page=pembayaran/index';
         </script>
         <?php
-}
-?>
+        }
+        ?>
 
         <!-- Tampil Data -->
         <table class="table table-bordered">
@@ -96,5 +97,10 @@ if (isset($_POST['selesai'])) {
                 <td></td>
             </tr>
         </table>
+        <form action="pembayaran/cetak.php" method="POST">
+<input type="hidden" value="<?php echo $nis  ?>" name="nis">
+<button class="btn btn-success" name="Selesai">Selesai</button>
+</form>
     </div>
+    
 </div>

@@ -102,7 +102,11 @@ if($_SESSION['status']!="sukses"){
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-
+            <li class="nav-item">
+                <a class="nav-link" href="?page=laporan/laporantanggal">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Laporan Per Tanggal</span></a>
+            </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
@@ -242,7 +246,7 @@ if($_SESSION['status']!="sukses"){
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Yanna Sofa</span>
+                        <span>Created by Yanna Sofa - XII RPL © 2023</span>
                     </div>
                 </div>
             </footer>

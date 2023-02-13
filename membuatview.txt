@@ -1,0 +1,1 @@
+SELECT pembayaran.tgl_bayar,pembayaran.no_kwitansi,siswa.nama,siswa.kelasok,petugas.nama_petugas,pembayaran.nis,pembayaran.id,bayar.nama_bayar,bayar.nominal from pembayaran,bayar,siswa,petugas WHERE bayar.id_bayar=pembayaran.id_bayar AND pembayaran.nis=siswa.nis AND petugas.id=pembayaran.id_petugas AND pembayaran.status='1' 
