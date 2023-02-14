@@ -51,7 +51,7 @@ else{
     
 }
 
-if (isset($_POST['selesai'])) {
+if (isset($_POST['selesaiii'])) {
     //membuat no_kwitansi
     $query=mysqli_query($koneksi,"select max(no_kwitansi) as no_kwitansi from pembayaran");
     $data=mysqli_fetch_array($query);

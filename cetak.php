@@ -2,9 +2,7 @@
 // memanggil library FPDF
 require('lib/fpdf.php');
 include 'koneksi.php';
- $nis='0114ef';
- $query= mysqli_query($koneksi,"select * from v_pembayaran where no kwitansi='1'");
-$data=mysqli_fetch_all($query);
+ 
 
  // intance object dan memberikan pengaturan halaman PDF
 $pdf=new FPDF('P','mm','A4');

@@ -5,7 +5,7 @@ session_start();
 $id_petugas=$_SESSION['id_petugas'];
 require('lib/fpdf.php');
 include '../koneksi.php';
-$nis=$_POST['nis'];
+// $nis=$_POST['nis'];
 
 //
 $query=mysqli_query($koneksi,"select max(no_kwitansi) as no_kwitansi from pembayaran");
@@ -13,6 +13,7 @@ $data=mysqli_fetch_array($query);
 $no_kwitansi=$data ['no_kwitansi']+1;
 $tgl_bayar=date('Y-m-d');
 //
+// echo $no_kwitansi;
 $query=mysqli_query($koneksi,"update pembayaran set no_kwitansi='$no_kwitansi' ,status='1', `id_petugas` = '$id_petugas' ,tgl_bayar='$tgl_bayar' where status='0'");
 
 //
@@ -50,6 +51,6 @@ $pdf->Cell(10,45,'',0,1);
 $pdf->Cell(150,20,'Petugas : ',0,1,'R');
 $pdf->Cell(150,10,$data['nama_petugas'],0,1,'R');
 $pdf->Output();
- 
+ob_end_flush(); 
 ?>
 <!-- <img src="lib/yanna.png" alt=""> -->
