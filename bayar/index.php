@@ -34,9 +34,9 @@ include "koneksi.php";
                             <td><?php echo formatUang($data['nominal'] ) ?></td>
                             <td>
                                 <button class="btn btn-danger"><a style="color: white; text-decoration: none;"
-                                        href="?page=produk/hapus&id=<?php echo $data['id'] ?>">Hapus</a></button>
+                                        href="?page=bayar/hapus&id_bayar=<?php echo $data['id_bayar'] ?>">Hapus</a></button>
                                 <button class="btn btn-warning"><a style="color: white; text-decoration: none;"
-                                        href="?page=produk/edit&id=<?php echo $data['id'] ?>">Edit</a></button>
+                                        href="?page=bayar/edit&id_bayar=<?php echo $data['id_bayar'] ?>">Edit</a></button>
                             </td>
                         </tr>
                         <?php
